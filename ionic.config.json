@@ -1,0 +1,7 @@
+{
+  "name": "AppLaundry",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
