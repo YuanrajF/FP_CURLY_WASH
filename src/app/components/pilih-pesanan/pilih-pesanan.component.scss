@@ -1,0 +1,183 @@
+.hidden {
+    display: none;
+}
+// Pilih Pesanan
+.choice{
+    width: 100%;
+    height: 10rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    border-radius: 2rem 2rem 0 0;
+}
+.card-choice{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap: 1rem;
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 10rem;
+    height: 5rem;
+    border-radius: .5rem;
+    background-color: var(--color-secondary);
+    box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.75);
+    cursor: pointer
+}
+.card-item:hover{
+    background-color: var(--color-primary);
+    font-weight: bold;
+}
+.btn-href{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+// Pilih Pelanggan
+.choose-cust{
+  width: 100%;
+  height: 90%;
+  background-color: var(--color-light);
+  justify-content: center;
+  color: black;
+  border-radius: 2rem 2rem 0 0;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+}
+.card-cust{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  
+}
+.card-detail-btn{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: sticky;
+  width: 100rem;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: .5rem;
+  margin: -1rem;
+  background-color: var(--color-light);
+  margin-bottom: 4.5rem;
+}
+.card-detail-btn .btn-back{
+  display: flex;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: black;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.btn-back ion-icon{
+  justify-content: flex-start;
+  align-items: start;
+}
+.card-detail-search{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  z-index: 999;
+  margin: -1rem;
+  margin-top: 1.4rem;
+  background-color: var(--color-light);
+  ion-searchbar.custom{
+    --background:var(--color-grey);
+    --border-radius: .5rem;
+    --color: black;
+  }
+}
+.card-detail-search input{
+  padding: .5rem 1rem;
+  width: 90%;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  border-radius: .5rem;
+  color: black;
+  font-weight: bold;
+}
+.card-detail-search .btn-search{
+  width: 2.5rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: .5rem;
+  box-shadow: 0px 1px 8px 1px black;
+}
+.card-detail-profile{
+  position: relative;
+  bottom: 0;
+  border: 2px solid black;
+  border-radius: 2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 2rem;
+  font-size: .8rem;
+}
+.card-detail-profile .pic-profile{
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-primary);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 8px 1px black;
+  color: var(--color-light);
+  border-radius: 2rem;
+}
+.card-detail-profile .name-cust{
+  font-weight: bold;
+}
+.card-detail-profile .no-cust{
+  font-weight: bold;
+}
+.card-detail-profile .btn-pilih{
+  position: absolute;
+  right: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-size: 1rem;
+  font-weight: bold;
+  width: 4rem;
+  height: 2rem;
+  border-radius: .5rem;
+  box-shadow: 0px 1px 8px 1px black;
+}

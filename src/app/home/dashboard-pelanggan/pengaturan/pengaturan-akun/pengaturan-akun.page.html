@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pengaturan-akun</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Main COntent -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn-back" routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></button>
+        <h3>Pengaturan Akun</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <h4>Ubah Password</h4>
+          <div class="form-group">
+            <!-- input username / no hp -->
+            <div class="form-item">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <input type="text" name="username-nohp" placeholder="Masukkan username / No Hp">
+            </div>
+            <!-- input password lama -->
+            <div class="form-item">
+              <ion-icon name="key-outline"></ion-icon>
+              <input type="password" name="password-lama" placeholder="Masukkan password lama">
+            </div>
+            <!-- input password baru -->
+            <div class="form-item">
+              <ion-icon name="key"></ion-icon>
+              <input type="password" name="password-baru" placeholder="Masukkan password baru">
+            </div>
+            <!-- input konfirmasi password baru -->
+            <div class="form-item">
+              <ion-icon name="key"></ion-icon>
+              <input type="password" name="konfirmasi-password-baru" placeholder="Konfirmasi password baru">
+            </div>
+            <button class="btn-submit">Ubah</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>  
+</ion-content>

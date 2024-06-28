@@ -1,0 +1,62 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">laporan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn-back" routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></button>
+        <h3>Laporan</h3>
+      </div>
+      <div class="card-body">
+        <!-- Total Pemasukkan -->
+        <div class="income">
+          <h4 class="value-total">Total Pemasukkan</h4>
+          <div class="body-order">
+            <ion-icon name="wallet-outline"></ion-icon>
+            <div class="income-total">Total pemasukkan</div>
+            <div class="value"><p>Rp.</p>(harga)</div>
+          </div>
+        </div>
+        <!-- Pesanan Hari ini -->
+        <div class="order-of-the-day">
+          <h4 class="order-value">Pesanan Hari Ini</h4>
+          <div class="body-order">
+            <ion-icon name="cash-outline"></ion-icon>
+            <div class="title-order">Nilai Pesanan</div>
+            <div class="value"><p>Rp.</p>(harga)</div>
+          </div>
+          <div class="body-order">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <div class="title-order">Jumlah Pesanan</div>
+            <div class="value"><p>(0)</p>Pesanan</div>
+          </div>
+          <div class="body-order">
+            <ion-icon name="close-circle-outline"></ion-icon>
+            <div class="title-order">Pesanan Batal</div>
+            <div class="value"><p>(0)</p>Pesanan</div>
+          </div>
+          <div class="body-order">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <div class="title-order">Total Belum Bayar</div>
+            <div class="value"><p>(0)</p>Pesanan</div>
+          </div>
+        </div>
+        <!-- Laporan Kas -->
+        <div class="cash-report">
+          <h4 class="value-report">Laporan Kas</h4>
+          <button class="btn-cash-report" routerLink="/home/dashboard-pelanggan/laporan/laporan-kas">
+            <div class="figure"><ion-icon name="cash-outline"></ion-icon></div>
+            <div class="text-figure">
+              <div class="large">Laporan Kas</div>
+              <div class="small">Laporan Mutasi Kas</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

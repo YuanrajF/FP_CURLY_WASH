@@ -35,3 +35,49 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+:root{
+    --color-primary: #139a81;
+    --color-secondary: #59ef54;
+    --color-grey: #C7C8CC;
+    --color-light: #FFFFFF;
+    --color-dark: #7D7C7C;
+    --color-hover: #90FFEB;
+
+    --ion-color-primary: #139a81;
+	--ion-color-primary-rgb: 19,154,129;
+	--ion-color-primary-contrast: #000000;
+	--ion-color-primary-contrast-rgb: 0,0,0;
+	--ion-color-primary-shade: #118872;
+	--ion-color-primary-tint: #2ba48e;
+
+	--ion-color-secondary: #59ef54;
+	--ion-color-secondary-rgb: 89,239,84;
+	--ion-color-secondary-contrast: #000000;
+	--ion-color-secondary-contrast-rgb: 0,0,0;
+	--ion-color-secondary-shade: #4ed24a;
+	--ion-color-secondary-tint: #6af165;
+
+    --ion-color-light: #FFFFFF;
+	--ion-color-light-rgb: 255,255,255;
+	--ion-color-light-contrast: #000000;
+	--ion-color-light-contrast-rgb: 0,0,0;
+	--ion-color-light-shade: #e0e0e0;
+	--ion-color-light-tint: #ffffff;
+
+    --ion-color-dark: #7D7C7C;
+	--ion-color-dark-rgb: 125,124,124;
+	--ion-color-dark-contrast: #000000;
+	--ion-color-dark-contrast-rgb: 0,0,0;
+	--ion-color-dark-shade: #6e6d6d;
+	--ion-color-dark-tint: #8a8989;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'quicksand', sans-serif;
+    text-decoration: none;
+}
+

@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">konfirmasi-order</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Main-content -->
+  <div class="container" >
+    <div class="header">
+      <span class="large">( nama customer)</span>
+      <span class="large">(NO NOTA)</span>
+      <span class="large">1 Hari</span>
+      <span class="small">(layanan)</span>
+    </div>
+    <div class="card-info">
+      <span class="large">KONFIRMASI ORDER LAUNDRY</span>
+      <div class="detail-info">
+        <span class="title">Total Biaya Laundry</span>
+        <span class="harga">Rp. ( total harga )</span>
+        <span class="xlarge">( total item ) pcs</span>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button class="btn-item" (click)="orderReady()">Pesanan Telah Siap</button>
+      <button class="btn-item-cancel" (click)="cancelOrder()">Batalkan Pesanan</button>
+    </div>
+  </div>
+</ion-content>

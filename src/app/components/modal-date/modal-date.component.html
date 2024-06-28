@@ -1,0 +1,18 @@
+<div class="overlay-modal" [ngClass]="{'hidden': !modalVisible}" (click)="closeModal()"></div>
+<div class="modalDate" [ngClass]="{'hidden': !modalVisible}">
+  <div class="card">
+    <div class="card-header">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <span class="large">Pilih Periode</span>
+    </div>
+    <form action="" class="card-body">
+      <div class="form-group">
+        <input type="date" class="first">
+        <input type="date" class="end">
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn-submit" (click)="submitModal()">Lihat Laporan Kas</button>
+      </div>
+    </form>
+  </div>
+</div>

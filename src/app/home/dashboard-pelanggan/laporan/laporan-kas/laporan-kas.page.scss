@@ -1,0 +1,109 @@
+/* Main Content */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../../../assets/Backgroundimage.png);
+    object-fit: cover;
+    position: center;
+  }
+  
+  .card {
+    width: 100%;
+    background-color: var(--color-light);
+    bottom: 0;
+    left: 0;
+    height: 95%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1rem;
+    gap: 1rem;
+    color: black;
+    font-weight: bold;
+    position: sticky;
+  }
+  
+  .card-header h3 {
+    font-weight: bold;
+  }
+  
+  .card-header::after {
+    content: '';
+    width: 100%;
+    height: .125rem;
+    background-color: var(--color-grey);
+    display: block;
+    left: 0;
+    top: 4rem;
+    position: absolute;
+  }
+  
+  .card-header .btn-back {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    font-size: 2rem;
+  }
+  
+  .card-body {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .card-body .text-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .text-group .large-first {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .text-group .large-first::after {
+    content: '';
+    height: 1px;
+    background-color: var(--color-grey);
+    display: inline-block;
+    width: 20rem;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .text-group .large {
+    padding: 0 .5rem 0 1rem;
+    background-color: var(--color-light);
+    z-index: 11;
+  }
+  .text-group .large::after {
+    content: '';
+    height: 1rem;
+    background-color: white;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: .2rem;
+  }
+  

@@ -1,0 +1,70 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Pesanan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn-back" routerLink="../">
+          <ion-icon name="return-up-back-outline"></ion-icon>
+        </button>
+        <h3>Pesanan</h3>
+      </div>
+      <div class="card-search">
+        <input type="search" placeholder="Cari nama / nota" [(ngModel)]="searchTerm" (input)="filterOrders()">
+        <button class="btn-search">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-status">
+          <a (click)="setTab('antrian')" [ngClass]="{'activated': activeTab === 'antrian'}" class="status-link">Antrian</a>
+          <a (click)="setTab('siapAmbil')" [ngClass]="{'activated': activeTab === 'siapAmbil'}" class="status-link">Siap Ambil</a>
+          <a (click)="setTab('riwayat')" [ngClass]="{'activated': activeTab === 'riwayat'}" class="status-link">Riwayat</a>
+        </div>
+        <div *ngIf="activeTab === 'antrian'">
+          <div *ngFor="let order of filteredOrdersInQueue">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>{{ order.customer.name }}</ion-card-title>
+                <ion-card-subtitle>{{ order.startTime | date:'short' }} - {{ order.duration }} Jam</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Harga: {{ order.price }}</p>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </div>
+        <div *ngIf="activeTab === 'siapAmbil'">
+          <div *ngFor="let order of filteredReadyOrders">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>{{ order.customer.name }}</ion-card-title>
+                <ion-card-subtitle>{{ order.startTime | date:'short' }} - {{ order.duration }} Jam</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Harga: {{ order.price }}</p>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </div>
+        <div *ngIf="activeTab === 'riwayat'">
+          <div *ngFor="let order of filteredHistoryOrders">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>{{ order.customer.name }}</ion-card-title>
+                <ion-card-subtitle>{{ order.startTime | date:'short' }} - {{ order.duration }} Jam</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Harga: {{ order.price }}</p>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

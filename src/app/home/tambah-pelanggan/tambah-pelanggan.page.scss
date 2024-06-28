@@ -1,0 +1,80 @@
+@import url(../../../global.scss);
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../assets/Backgroundimage.png);
+    object-fit: cover;
+    position: center;
+    transition: all .35s ease-in;
+}
+
+// Breadcrumb
+.bread-crumb{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    align-items: center;
+}
+.btn-back{
+    border: none;
+    background-color: transparent;
+    color: var(--color-light);
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-back ion-icon{
+    font-size: 1.8rem;
+    margin-left: .5rem;
+}
+.btn-back:hover{
+    background-color: transparent;
+    width: 70%;
+    box-shadow: 0px 0px 15px -5px var(--color-light);
+    border-radius: 2rem;
+}
+
+// form-group
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+.form-item{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.form-item ion-icon{
+    font-size: 1.8rem;
+}
+.form-item input{
+    padding: .5rem 1rem;
+    outline: none;
+    background-color: var(--color-grey);
+    border: 2px solid var(--color-light);
+    border-radius: .5rem;
+    color: black ;
+}
+.btn-submit{
+    width: 100%;
+    height: 2.2rem;
+    margin-top: 1rem;
+    background-color: var(--color-primary);
+    font-size: 1rem;
+    border-radius: .8rem;
+    color: var(--color-light);
+    cursor: pointer;
+}

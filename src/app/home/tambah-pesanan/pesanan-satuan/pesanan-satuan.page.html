@@ -1,0 +1,75 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pesanan-satuan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn-back" routerLink="../">
+          <ion-icon name="return-up-back-outline"></ion-icon>
+        </button>
+        <h3>Item Satuan</h3>
+      </div>
+
+      <div class="card-body">
+        <ion-list lines="none">
+          <ion-item *ngFor="let user of users">
+            <ion-label>
+              <h2>{{user.title}}</h2>
+              <p>{{user.harga | currency:'IDR'}}</p>
+            </ion-label>
+            <ion-button fill="clear" (click)="decreaseItem(user)" *ngIf="user.quantity > 0">
+              <ion-icon name="remove-outline"></ion-icon>
+            </ion-button>
+            <ion-badge  *ngIf="user.quantity > 0">{{ user.quantity }}</ion-badge>
+            <ion-button fill="clear" (click)="increaseItem(user)">
+              <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-list>
+
+        <ion-button expand="block" class="btn-card-display" id="cardDisplay">
+          <span class="large">LANJUT</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+
+        <div class="overlay hidden" id="overlayCard"></div>
+
+        <div class="card-detail hidden" id="cardDetail">
+          <figure>
+            <div class="pict">
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <div class="text-figure">
+              <span class="large">{{ customer.name }}</span>
+              <span class="small">{{ customer.phone }}</span>
+            </div>
+            <div class="total-item-large">{{ totalItems }} pcs</div>
+          </figure>
+
+          <div class="card-btn">
+            <div class="text-btn">
+              <span class="large">{{ totalPrice | currency:'Rp' }}</span>
+              <span class="small">Total Layanan</span>
+            </div>
+
+            <div class="btn-group">
+              <button class="btn-cancel" id="btnCancel">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <span class="large">Batal</span>
+              </button>
+              <button class="btn-lanjut" routerLink="/home/tambah-pesanan/pesanan-satuan/konfirmasi-pesanan">
+                <span class="large">Lanjut</span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

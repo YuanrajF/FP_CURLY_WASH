@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pengaturan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn-back" routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></button>
+        <h3>Pengaturan</h3>
+      </div>
+      <div class="card-body">
+        <div class="btn-group">
+          <button class="btn-setting" routerLink="/home/dashboard-pelanggan/pengaturan/pengaturan-akun">
+            <div class="figure"><ion-icon name="person"></ion-icon></div>
+            <div class="text-figure">
+              <div class="large">Pengaturan Akun</div>
+              <div class="small">Ubah Password akun anda</div>
+            </div>
+          </button>
+          <button class="btn-setting" routerLink="/home/dashboard-pelanggan/pengaturan/pengaturan-durasi">
+            <div class="figure"><ion-icon name="alarm"></ion-icon></div>
+            <div class="text-figure">
+              <div class="large">Pengaturan Durasi & Layanan</div>
+              <div class="small">Ubah durasi & layanan</div>
+            </div>
+          </button>
+          <button class="btn-logout" routerLink="/login">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

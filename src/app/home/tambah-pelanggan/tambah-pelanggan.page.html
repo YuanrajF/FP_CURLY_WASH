@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+<!-- Header -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tambah-pelanggan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<!-- Main -->
+  <div class="container">
+    <!-- Bread-crumb -->
+    <div class="bread-crumb">
+      <button class="btn-back" routerLink="/home">
+        <ion-icon name="return-up-back-outline"></ion-icon>
+        <p>Tambah Pelanggan</p>
+      </button>
+    </div>
+    <!-- form-group -->
+    <form action="" method="post">
+      <div class="form-group">
+        <div class="form-item">
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" name="nama-pelanggan" placeholder="Nama Pelanggan">
+        </div>
+        <div class="form-item">
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+          <input type="text" name="nomor-pelanggan" placeholder="Nomor Pelanggan">
+        </div>  
+        <div class="form-item">
+          <ion-icon name="map-outline"></ion-icon>
+          <input type="text" name="alamat-pelanggan" placeholder="Alamat Pelanggan">
+        </div>  
+      </div>
+      <button class="btn-submit" type="submit" name="submit">Tambahkan</button>
+    </form>
+  </div>
+</ion-content>
+

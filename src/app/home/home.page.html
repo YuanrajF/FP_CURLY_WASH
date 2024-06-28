@@ -1,20 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
+<!-- Header -->
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Laundry App</ion-title>
     </ion-toolbar>
   </ion-header>
+<!-- End Header -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<!-- Main-Content -->
+  <div id="main">
+    <div class="container">
+      <div class="logo-brand">
+        <img src="../../assets/LaundryLogo.png" alt="logo" width="120">
+      </div>
+      <!-- Form -->
+      <div class="form-tambah">
+        <div class="btn-tambah-pelanggan">
+          <button class="btn-item" routerLink="/home/tambah-pelanggan">
+            <ion-icon name="person-add-outline"></ion-icon>
+            <p>Tambah Pelanggan</p>
+          </button>
+        </div>
+        <div class="btn-tambah-pesanan">
+          <button class="btn-item" routerLink="/home/tambah-pesanan">
+            <ion-icon name="add-outline"></ion-icon>
+            <p>Tambah Pesanan</p>
+          </button>
+        </div>
+      </div>
+      <!-- Navbar -->
+      <!-- Navbar -->
+      <div class="navbar">
+        <button class="nav-item" routerLink="/home" routerLinkActive="active" >
+          <ion-icon name="home-outline"></ion-icon>
+          <p class="title">Beranda</p>
+        </button>
+        <button class="nav-item" routerLink="pesanan" routerLinkActive="active">
+            <ion-icon name="reader-outline"></ion-icon>
+            <p class="title">Pesanan</p>
+        </button>
+        <button class="nav-item" routerLink="/home/laporan" routerLinkActive="active">
+          <ion-icon name="trending-up-outline"></ion-icon>
+          <p class="title">Laporan</p>
+        </button>
+        <button class="nav-item" routerLink="/home/pengaturan" routerLinkActive="active">
+          <ion-icon name="settings-outline"></ion-icon>
+          <p class="title">Pengaturan</p>
+        </button>
+      </div>
+    </div>
   </div>
 </ion-content>

@@ -1,0 +1,40 @@
+<div class="choice">
+  <div class="card-choice">
+    <div class="card-item" id="kiloan">
+      <img src="../../../assets/icon/icon/Layers.png" alt="logoKiloan">
+      <p>Kiloan</p>
+    </div>
+    <div class="card-item" id="satuan">
+      <img src="../../../assets/icon/icon/del_alt_duotone_line.png" alt="logoSatuan">
+      <p>Satuan</p>
+    </div>
+    <button class="btn-href" routerLink="/home"><ion-icon name="close-circle-outline"></ion-icon></button>
+  </div>
+</div>
+
+<!-- Pilih pelanggan -->
+<input type="hidden">
+<div class="choose-cust hidden" id="chooseCust" #chooseCust>
+  <div class="card-cust">
+    <div class="card-detail-btn">
+      <button class="btn-back" id="backButton" #backButton>
+        <ion-icon name="return-up-back-outline"></ion-icon>
+        <p>kembali</p>
+      </button>
+    </div>
+    <hr style="background-color: black;">
+    <div class="card-detail-search">
+      <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterCustomers()" class="custom"></ion-searchbar>
+    </div>
+    <div class="card-detail-profile" *ngFor="let customer of filteredCustomers" (click)="selectCustomer(customer)">
+      <div class="pic-profile">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </div>
+      <div class="text-group">
+        <p class="name-cust">{{customer.name}}</p>
+        <span>No. handphone</span>
+        <p class="no-cust">{{customer.phone}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,159 @@
+@import url(../../../../global.scss);
+
+.container{
+    width: 100%;
+    background-image: url(../../../../assets/Backgroundimage.png);
+    object-fit: cover;
+    position: center;
+    height: 100vh;
+}
+.hidden{
+    visibility: hidden;
+}
+// Card (global)
+.card{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    color: black;
+    
+    background-color: var(--color-light);
+    margin-top: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom: 0;
+    z-index: 999;
+}
+// Card-header
+.card-header{
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 99;
+}
+.card-header .btn-back{
+    position:absolute;
+    left: 1rem;
+    top: 1rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.card-header::after {
+    content: ""; 
+    display: block;
+    width: 100%; 
+    height: .125rem; 
+    background-color: black; 
+    position: absolute;
+    left: 0;
+}
+// Card-body
+.card-body{
+    
+    width: 90%;
+    margin: 0 auto;
+    overflow: scroll;
+    padding: 1rem;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1rem;
+    transition: all .35s ease-in;
+}
+.form-group h4{
+    font-weight: bold;
+}
+.form-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    position: relative;
+    border: 2px solid black;
+    border-radius: .5rem;
+}
+.form-item label{
+    font-weight: bold;
+}
+.radio-box{
+    position: absolute;
+    right: 2rem;
+    top: 1.8rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: -2rem -2rem 0 0;
+}
+.form-item-catatan{
+    margin-top: 1rem;
+    padding: .5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+.form-item-catatan ion-icon{
+    font-size: 2rem;
+}
+.catatan{
+    padding: .5rem 1rem;
+    width: 90%;
+    outline: none;
+    border: 1px solid var(--color-secondary);
+    border-radius: .5rem;
+}
+.catatan:focus{
+    border: 1px solid var(--color-secondary);
+    box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.75);
+}
+.form-item-kiloan{
+    margin-top: 1rem;
+    padding: .5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+.form-item-kiloan ion-icon{
+    font-size: 2rem;
+}
+.kilo{
+    padding: .5rem 1rem;
+    width: 90%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: .5rem;
+    box-shadow: 0px 1px 17px 2px rgba(0,0,0,0.75);
+}
+.btn-submit{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    border-radius: 2rem;
+    font-size: 1rem;
+    box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.75);
+}
+.btn-submit:active{
+    background-color: var(--color-secondary);
+}

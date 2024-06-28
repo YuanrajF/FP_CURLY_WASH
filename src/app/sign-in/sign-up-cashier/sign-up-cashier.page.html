@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" default-href="/login">
+      <ion-icon name="forward-outline"></ion-icon>
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="signup-container">
+    <ion-text>Daftar Kasir</ion-text>
+    <form (ngSubmit)="onSubmit()">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="text" [(ngModel)]="email" name="email" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input [type]="passwordType" [(ngModel)]="password" name="password" required></ion-input>
+              <ion-icon
+                [name]="passwordType === 'password' ? 'eye-off' : 'eye'"
+                slot="end"
+                class="password-icon"
+                (click)="togglePasswordVisibility()">
+              </ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Confirm Password</ion-label>
+              <ion-input [type]="confirmPasswordType" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+              <ion-icon
+                [name]="confirmPasswordType === 'password' ? 'eye-off' : 'eye'"
+                slot="end"
+                class="password-icon"
+                (click)="toggleConfirmPasswordVisibility()">
+              </ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Username</ion-label>
+              <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" type="submit">Daftar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

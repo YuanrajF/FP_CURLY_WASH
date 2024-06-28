@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Form Tambah Pesanan</h3>
+        <button class="btn-back" routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></button>
+      </div>
+      <div class="card-body">
+        <form id="orderForm" (ngSubmit)="submitOrder()">
+          <!-- Pilih Durasi -->
+          <div class="form-group" id="durasiGroup">
+            <h4>Pilih Durasi</h4>
+            <div class="form-item" *ngFor="let duration of orderOptions.durations; let i = index">
+              <label [for]="'durasi' + i">{{ getDurasiLabel(i) }}</label>
+              <p class="durasi">{{ duration }} Jam</p>
+              <input [id]="'durasi' + i" class="radio-box" type="radio" name="durasi" [value]="duration" (change)="onDurasiChange(duration)">
+            </div>
+          </div>
+          <!-- Pilih Layanan -->
+          <div class="form-group" id="layananGroup" *ngIf="showLayananGroup">
+            <h4>Pilih Layanan</h4>
+            <div class="form-item" *ngFor="let price of orderOptions.prices; let i = index">
+              <label [for]="'layanan' + i">{{ getLayananLabel(i) }}</label>
+              <p class="harga">{{ price }}</p>
+              <input [id]="'layanan' + i" class="radio-box" type="radio" name="layanan" [value]="price" (change)="onLayananChange(price)">
+            </div>
+          </div>
+          <!-- Atur Pesanan -->
+          <div class="form-group" id="pesananGroup" *ngIf="showPesananGroup">
+            <h4>Atur Pesanan</h4>
+            <div class="form-item">
+              <label for="parfum">Parfum</label>
+              <select name="parfum" id="parfum" [(ngModel)]="order.parfum">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label for="antarjemput">Antar-jemput</label>
+              <select name="antarjemput" id="antarJemput" [(ngModel)]="order.antarjemput">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label for="diskon">Diskon</label>
+              <select name="diskon" id="diskon" [(ngModel)]="order.diskon">
+                <option *ngFor="let discount of orderOptions.discounts" [value]="discount">{{ discount }}</option>
+              </select>
+            </div>
+            <div class="form-item-catatan">
+              <ion-icon name="document-text-outline"></ion-icon>
+              <input class="catatan" type="text" name="catatan" placeholder="Catatan" [(ngModel)]="order.catatan">
+            </div>
+            <div class="form-item-kiloan">
+              <ion-icon name="scale-outline"></ion-icon>
+              <input class="kilo" type="text" name="kilo" placeholder="Total Berat dalam (Kg)" [(ngModel)]="order.kilo" required>Kg
+            </div>
+          </div>
+          <button id="btnSubmit" class="btn-submit" type="submit" name="submit" *ngIf="showSubmitButton">Buat Pesanan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>
